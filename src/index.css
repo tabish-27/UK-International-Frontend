@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Root font-size control */
+html {
+  font-size: 100%; /* default 16px */
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* smooth scrolling */
+}
+
+/* Zoom fix: adjust root font size dynamically */
+@media (min-resolution: 120dpi) {
+  html {
+    font-size: 90%; /* slightly smaller when zoom/resolution is higher */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif; /* Body text */
+}
+
+/* Mobile extra safety */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Headings font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Universal box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 1.2s infinite ease-in-out;
+}

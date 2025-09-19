@@ -1,0 +1,31 @@
+/* src/carousel.css */
+@keyframes carousel-slide-small {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-carousel-small {
+  animation: carousel-slide-small 15s linear infinite;
+  display: flex;
+}
+
+
+
+/* src/carousel.css */
+@keyframes carousel-slide-awards {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-awards-small {
+  animation: carousel-slide-awards 15s linear infinite;
+  display: flex;
+}
