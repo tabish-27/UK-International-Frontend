@@ -38,11 +38,14 @@ const EnquiryForm = () => {
 
     if (valid) {
       try {
-const response = await fetch(`https://your-hosted-backend-url.com/api/user/register`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, phone, city, course, source: "bottom_form" }),
-        });
+        const response = await fetch(
+          `https://uk-international-backend.onrender.com/api/user/register`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, phone, city, course, source: "bottom_form" }),
+          }
+        );
 
         if (response.ok) {
           setMessage("Thank you! Your enquiry has been submitted.");
@@ -52,7 +55,7 @@ const response = await fetch(`https://your-hosted-backend-url.com/api/user/regis
           // WhatsApp trigger
           try {
             const whatsappRes = await fetch(
-              "http://localhost:4000/api/whatsapp/send-message",
+              "https://uk-international-backend.onrender.com/api/whatsapp/send-message",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
